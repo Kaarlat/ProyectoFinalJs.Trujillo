@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./scr/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>POR HACER</title>
+</head>
+
+<body>
+    <div class="nav">
+        <h1>LISTA DE Tareas DIARIAS</h1>
+        <div class="inicioSesion">
+            <a href="./login.html">
+                <i class="fa-solid fa-user-astronaut" style="color: #443965;"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="datos">
+        <p id="total">Total proyectos: 0</p>
+        <p id="completadas">Proyectos Completadas: 0</p>
+    </div>
+
+    <div class="contenedor">
+
+        <form class="formulario" id="formulario">
+            <h4>Nombre de Actividad</h4>
+            <input type="text" id="tarea">
+            <input type="submit" value="Agregar">
+        </form>
+
+        <div class="tareas" id="tareas">
+
+            <div class="item-tarea">
+                <p>Tarea 1</p>
+                <div class="botones">
+                    <button class="eliminar" data-id="${item.id}">✖️😔</button>
+                    <button class="completada" data-id="${item.id}">✔️😉</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

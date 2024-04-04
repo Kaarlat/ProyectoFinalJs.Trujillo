@@ -1,0 +1,169 @@
+/* General */
+* {
+    margin: 0px;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Nunito', sans-serif;
+}
+/* Nav */
+.nav {
+    padding: 10px;
+    background-color: rgb(183, 161, 187);
+    color: rgb(136, 92, 139);
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.nav h1 {
+    text-align: center;
+    text-transform: uppercase;
+    margin-left: 40%;
+}
+
+.nav .inicioSesion {
+    padding: 10px;
+    cursor: pointer;
+}
+nav.inicioSesion:hover{
+    transform: scale(1.2);
+}
+
+
+h5 {
+    text-align: center;
+    font-size: 18px;
+    padding: 30px;
+}
+
+.completa {
+    text-decoration: line-through;
+    color: rgb(136, 160, 152);
+}
+/* Datos */
+.datos {
+    background-color: rgb(92, 72, 93);
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    gap: 10px;
+}
+
+.datos p {
+    background-color: rgb(20, 32, 47);
+    color: aliceblue;
+    padding: 6px 10px;
+    border-radius: 5px;
+}
+/* Contenedor */
+.contenedor {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 15px;
+}
+
+.contenedor .formulario {
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: rgb(215, 159, 166);
+    color: #fff;
+    max-height: 110px;
+}
+
+.contenedor .formulario input[type="text"] {
+    border: none;
+    padding: 8px;
+}
+
+.contenedor .formulario input[type="text"]:focus {
+    outline: none;
+    border-bottom: 5px solid rgb(32, 0, 49);
+    ;
+}
+
+.contenedor .formulario input[type="submit"] {
+    border: none;
+    padding: 10px;
+    background-color: rgba(79, 42, 82, 0.855);
+    color: #fff;
+    cursor: pointer;
+}
+
+.contenedor .tareas {
+    padding: 10px;
+    margin: 10px;
+    background-color: rgb(246, 215, 250);
+}
+
+.contenedor .item-tarea {
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 10px;
+    margin: 10px 2px;
+}
+/* Eliminar y Completar Tareas */
+.eliminar {
+    border: none;
+    background-color: rgb(255, 0, 89);
+    color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform ease 300ms;
+    padding: 8px;
+}
+
+.eliminar:hover {
+    transform: scale(1.3);
+}
+
+.completada {
+    border: none;
+    background-color: rgb(255, 0, 200);
+    color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform ease 300ms;
+    padding: 8px;
+}
+
+.completada:hover {
+    transform: scale(1.3);
+}
+/* Responsive */
+@media (max-width: 900px) {
+    .contenedor {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 15px;
+    }
+    .nav {
+        padding: 10px;
+        background-color: rgb(183, 161, 187);
+        color: rgb(136, 92, 139);
+        display: flex;
+        justify-content: space-between; 
+        align-items: center; 
+    }
+    
+    .nav h1 {
+        text-align: center;
+        text-transform: uppercase;
+        margin: 0;
+    }
+    
+    .nav .inicioSesion {
+        padding: 10px;
+    }
+}
+
