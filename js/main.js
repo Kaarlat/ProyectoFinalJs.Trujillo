@@ -9,12 +9,42 @@ let task = [];
     tareas.addEventListener("click", eliminarTarea);
     tareas.addEventListener("click", completarTarea);
     document.addEventListener("DOMContentLoaded", () => {
-        let datosLS = JSON.parse(localStorage.getItem("tareas")) || [];
-        task = datosLS;
-        agregarHTML();
+
+        fetch('data/tareas.json')
+        .then( respuesta => {
+            return respuesta.json()
+        })
+        .then( data => {
+            crearTareas(data)
+        })
+        .catch((err) =>{
+                Swal.fire({
+                    title: "COMENZAR",
+                    text: "Por favor comienza a ingresar tus tareas correctamente 💪",
+                    icon: "warning",
+                    confirmButtonText: "OK",
+            })
+
+            let datosLS = JSON.parse(localStorage.getItem("tareas")) || [];
+            task = datosLS;
+            agregarHTML();
+        })
     })
 })()
 
+function crearTareas(tareas) {
+    const contenido = document.querySelector('#lista-tareas');
+    let html ="";
+    tareas.forEach((tarea) => {
+        html += `
+        <div class="tareas">
+            <h2>${tarea.id}</h2>
+            <p>${tarea.tarea}</p>
+        </div>
+        `;
+    });
+    contenido.innerHTML = html;
+}
 
 function validarFormulario(e) {
     e.preventDefault();
@@ -97,4 +127,3 @@ function completarTarea(e) {
         agregarHTML();
     }
 }
-
