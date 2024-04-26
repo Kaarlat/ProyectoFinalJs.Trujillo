@@ -5,6 +5,7 @@ const signinBtn = document.querySelector('.signin-btn');
 const signupBtn = document.querySelector('.signup-btn');
 //Eventos
 signupBtn.addEventListener('click', ()=>{
+    console.log("hola");
     containerForm.classList.add('active');
     body.classList.add('active');
 })

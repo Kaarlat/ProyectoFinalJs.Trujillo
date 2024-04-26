@@ -6,22 +6,19 @@
     <link rel="shortcut icon" href="./scr/favicon.png" type="image/x-icon">
     <title>Inicia sesión</title>
     <link rel="stylesheet" href="./css/login.css">
+    
 </head>
 <body>
     <!-- Inicio de sesión y registrarse -->
     <div class="container">
-
         <div class="container-box">
             <div class="box signin">
                 <h2>Tienes cuenta?</h2>
                 <button class="signin-btn">Iniciar sesión</button>
             </div>
-
             <div class="box signup">
                 <h2>No tienes cuenta?</h2>
-                <a href="./signup.html">
-                    <button class="signup-btn">Registrate</button>
-                </a>
+                <button class="signup-btn">Registrate</button>
             </div>
         </div>
         <!-- Iniciar sesión -->
@@ -37,19 +34,19 @@
             </div>
             <!-- Registrarse -->
             <div class="form signup-form">
-                <form action="./index.html">
+                <form action="./login.html">
                     <h2>Crea tu cuenta</h2>
                     <input type="text" placeholder="Nombre de usuario">
                     <input type="email" placeholder="Correo">
                     <input type="password" placeholder="Contraseña">
                     <input type="password" placeholder="Confirma tu contraseña">
-                    <input type="submit" value="Registrar">
+                    <input id="btn-register" type="submit" value="Registrar">
                 </form>
             </div>
         </div>
-
     </div>
-
-    <script src="./js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="./js/login.js"></script>
+    <script src="./js/signup.js"></script>
 </body>
 </html>
